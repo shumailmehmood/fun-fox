@@ -5,6 +5,7 @@ interface Task {
   completed: boolean;
   groupId: number;
   lastUpdated: string;
+  addedBy?:string;
 }
 
 export default Task;

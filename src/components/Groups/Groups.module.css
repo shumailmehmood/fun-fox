@@ -1,0 +1,21 @@
+.groupCard {
+    margin: 10px;
+    text-align: center;
+    border-top: 4px solid #46bcff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.groupCard:hover {
+    transform: scale(1.05);
+}
+
+.userChips {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.usernameChip {
+    margin: 4px;
+}

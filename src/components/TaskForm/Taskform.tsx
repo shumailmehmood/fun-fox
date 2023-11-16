@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { TextField, Button, Grid, Paper, Snackbar } from "@mui/material";
 import Task from "../../models/Task";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { AuthContext } from "../../Auth/AuthContext";
 
 interface TaskFormProps {
   addTask: (task: Task) => void;
@@ -13,6 +14,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ addTask }) => {
   const [titleError, setTitleError] = useState("");
   const [descriptionError, setDescriptionError] = useState("");
   const [openSnackbar, setOpenSnackbar] = useState(false);
+  const { user } = useContext(AuthContext);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -36,6 +38,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ addTask }) => {
         completed: false,
         groupId: 0,
         lastUpdated: new Date().toLocaleString(),
+        addedBy: user?.username || "system",
       };
       addTask(newTask);
       setTitle("");

@@ -55,6 +55,7 @@ const TaskList: React.FC<TaskListProps> = ({
                         onToggleStatus={() => toggleComplete(task.id)}
                         date={task.lastUpdated}
                         taskId={task.id}
+                        addedBy={task?.addedBy}
                       />
                     </div>
                   )}

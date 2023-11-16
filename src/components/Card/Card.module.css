@@ -3,7 +3,7 @@
 }
 
 .cardContainer:hover {
-    background-color: #6db7e3dc;
+transform: scale(1.05);
 }
 
 .clicked {

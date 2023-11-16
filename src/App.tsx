@@ -72,6 +72,7 @@ const App: React.FC = () => {
   const toggleComplete = async (taskId: number) => {
     try {
       await axios.put<Task>(`http://localhost:5000/tasks/${taskId}`, {
+        ...tasks.find((res) => res.id === taskId),
         completed: true,
       });
       fetchTasks(selectedGroup);

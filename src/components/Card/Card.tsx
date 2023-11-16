@@ -27,6 +27,7 @@ interface CustomCardProps {
   description: string;
   status: boolean;
   date: string;
+  addedBy?: string;
   onToggleStatus: (taskId: number) => void;
   onDelete: (taskId: number) => void;
   taskId: number;
@@ -37,6 +38,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
   description,
   status,
   date,
+  addedBy,
   onToggleStatus,
   onDelete,
   taskId,
@@ -96,7 +98,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
               color="success"
               startIcon={<CheckIcon />}
               onClick={() => setOpenConfirmComplete(true)}
-              disabled={status}
+              disabled={status || user?.username !== addedBy}
             />
 
             <Dialog
@@ -124,7 +126,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
             </Dialog>
           </Grid>
           <Grid item spacing={2}>
-            <Chip label={user?.username} icon={<FaceIcon />} color="info" />
+            <Chip label={addedBy} icon={<FaceIcon />} color="info" />
             <Chip label={date} icon={<AccessTimeIcon />} color="info" />
             <IconButton onClick={() => setOpenConfirmDelete(true)}>
               <DeleteIcon sx={{ color: red[900] }} />

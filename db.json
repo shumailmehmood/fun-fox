@@ -30,28 +30,49 @@
   ],
   "tasks": [
     {
-      "id": 80,
-      "title": "Harry",
-      "description": "I am harry from group B",
-      "completed": false,
-      "groupId": 2,
-      "lastUpdated": "16/11/2023, 22:57:30"
-    },
-    {
-      "id": 290,
-      "title": "John",
-      "description": "I am john From Group A",
+      "id": 350,
+      "title": "Task 1",
+      "description": "Hy, I am john from Group A and I added this task.",
       "completed": false,
       "groupId": 1,
-      "lastUpdated": "16/11/2023, 22:58:13"
+      "lastUpdated": "17/11/2023, 01:57:58",
+      "addedBy": "john"
     },
     {
-      "id": 187,
-      "title": "John",
-      "description": "I am john From Group B",
+      "id": 461,
+      "title": "Task 2 (John)",
+      "description": "Hy I am John This is my second task.",
+      "completed": false,
+      "groupId": 1,
+      "lastUpdated": "17/11/2023, 01:58:39",
+      "addedBy": "john"
+    },
+    {
+      "id": 366,
+      "title": "Task 1 (John)",
+      "description": "My name is JJ",
       "completed": false,
       "groupId": 2,
-      "lastUpdated": "16/11/2023, 22:59:00"
+      "lastUpdated": "17/11/2023, 01:59:30",
+      "addedBy": "john"
+    },
+    {
+      "id": 772,
+      "title": "Task 2 (John(",
+      "description": "Hy John!",
+      "completed": false,
+      "groupId": 2,
+      "lastUpdated": "17/11/2023, 01:59:47",
+      "addedBy": "john"
+    },
+    {
+      "id": 768,
+      "title": "Task 3 (Harry)",
+      "description": "Hy Harry!",
+      "completed": true,
+      "groupId": 2,
+      "lastUpdated": "17/11/2023, 02:02:46",
+      "addedBy": "harry"
     }
   ]
 }
