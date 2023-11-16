@@ -3,8 +3,8 @@ interface Task {
   title: string;
   description: string;
   completed: boolean;
-  groupId: string;
-  lastUpdated: Date;
+  groupId: number;
+  lastUpdated: string;
 }
 
 export default Task;

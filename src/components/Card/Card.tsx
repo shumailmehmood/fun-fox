@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   Card,
   CardContent,
@@ -12,18 +12,21 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
+  Chip,
 } from "@mui/material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import FaceIcon from "@mui/icons-material/Face";
 import CheckIcon from "@mui/icons-material/Check";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { red } from "@mui/material/colors";
 import styles from "./Card.module.css";
+import { AuthContext } from "../../Auth/AuthContext";
 
 interface CustomCardProps {
   name: string;
   description: string;
   status: boolean;
-  date: Date;
+  date: string;
   onToggleStatus: (taskId: number) => void;
   onDelete: (taskId: number) => void;
   taskId: number;
@@ -40,6 +43,7 @@ const CustomCard: React.FC<CustomCardProps> = ({
 }) => {
   const [openConfirmComplete, setOpenConfirmComplete] = useState(false);
   const [openConfirmDelete, setOpenConfirmDelete] = useState(false);
+  const { user } = useContext(AuthContext);
 
   const handleConfirmComplete = () => {
     onToggleStatus(taskId);
@@ -119,13 +123,9 @@ const CustomCard: React.FC<CustomCardProps> = ({
               </DialogActions>
             </Dialog>
           </Grid>
-          <Grid item>
-            <IconButton disabled>
-              <AccessTimeIcon />
-            </IconButton>
-            <Typography variant="body2" component="span">
-              {date.toLocaleDateString()}
-            </Typography>
+          <Grid item spacing={2}>
+            <Chip label={user?.username} icon={<FaceIcon />} color="info" />
+            <Chip label={date} icon={<AccessTimeIcon />} color="info" />
             <IconButton onClick={() => setOpenConfirmDelete(true)}>
               <DeleteIcon sx={{ color: red[900] }} />
             </IconButton>

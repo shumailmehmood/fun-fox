@@ -34,8 +34,8 @@ const TaskForm: React.FC<TaskFormProps> = ({ addTask }) => {
         title,
         description,
         completed: false,
-        groupId: "default",
-        lastUpdated: new Date(),
+        groupId: 0,
+        lastUpdated: new Date().toLocaleString(),
       };
       addTask(newTask);
       setTitle("");

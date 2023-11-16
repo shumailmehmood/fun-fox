@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Harry Smith",
+      "username": "harry"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "username": "john"
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Group A",
+      "users": [
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Group B",
+      "users": [
+        1,
+        2
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": 80,
+      "title": "Harry",
+      "description": "I am harry from group B",
+      "completed": false,
+      "groupId": 2,
+      "lastUpdated": "16/11/2023, 22:57:30"
+    },
+    {
+      "id": 290,
+      "title": "John",
+      "description": "I am john From Group A",
+      "completed": false,
+      "groupId": 1,
+      "lastUpdated": "16/11/2023, 22:58:13"
+    },
+    {
+      "id": 187,
+      "title": "John",
+      "description": "I am john From Group B",
+      "completed": false,
+      "groupId": 2,
+      "lastUpdated": "16/11/2023, 22:59:00"
+    }
+  ]
+}
