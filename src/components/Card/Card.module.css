@@ -1,0 +1,28 @@
+.cardContainer {
+    transition: transform 0.2s ease-in-out;
+}
+
+.cardContainer:hover {
+    background-color: #46bcff;
+}
+
+.clicked {
+    animation: bubble 1s;
+    /* Bubble animation */
+}
+
+@keyframes bubble {
+    0% {
+        transform: scale(1);
+        background-color: #46bcff;
+        /* New color */
+    }
+
+    100% {
+        transform: scale(3);
+        background-color: initial;
+        /* Revert to original color */
+        opacity: 0;
+        /* Fade out */
+    }
+}

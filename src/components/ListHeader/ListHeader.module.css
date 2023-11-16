@@ -1,0 +1,8 @@
+.top {
+    margin-top: 1rem;
+    border-top: 4px solid #46BCFF;
+}
+.stickyCard {
+    position: sticky;
+    top: 20px;
+}
